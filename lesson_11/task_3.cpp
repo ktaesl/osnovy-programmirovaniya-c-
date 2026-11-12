@@ -7,6 +7,7 @@ int main() {
     int price;
     int amount;
     int i;
+    int kolvo;
 
     std::cout << "Write budget: ";
     std::cin >> budget;
@@ -17,11 +18,11 @@ int main() {
                 std::cout << "Write price: ";
                 std::cin >> price;
                 if (0 < price < 100000 ) {
-                    if (price < budget) {
+                    if (price <= budget && price != 0) {
                         std::cout << "Added" << std::endl;
                         amount += price;
                         budget -= price;
-                        i += 1;
+                        kolvo += 1;
                     } else {
                         std::cout << "Not enough money";
                     }
